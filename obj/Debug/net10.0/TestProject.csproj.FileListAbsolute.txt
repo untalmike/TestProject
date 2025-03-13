@@ -12,3 +12,4 @@ C:\wamp64\www\CsharpProjects\TestProject\obj\Debug\net10.0\refint\TestProject.dl
 C:\wamp64\www\CsharpProjects\TestProject\obj\Debug\net10.0\TestProject.pdb
 C:\wamp64\www\CsharpProjects\TestProject\obj\Debug\net10.0\TestProject.genruntimeconfig.cache
 C:\wamp64\www\CsharpProjects\TestProject\obj\Debug\net10.0\ref\TestProject.dll
+C:\wamp64\www\CsharpProjects\TestProject\obj\Debug\net10.0\TestProject.sourcelink.json
