@@ -20,3 +20,9 @@ Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
 
 // comprobability length
 Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process.");
+
+string[] names = { "Rowena", "Robin", "Bao" };
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
