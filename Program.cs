@@ -1,13 +1,8 @@
-﻿int[] inventory = { 200, 450, 700, 175, 250 };
+﻿string[] fraudulentSurveys = [ "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" ];
 
-int sum = 0;
-int bin = 0;
-
-foreach (int items in inventory)
+foreach (string items in fraudulentSurveys)
 {
-    sum += items;
-    bin++;
-    Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+    if (items.StartsWith("B")){
+        Console.WriteLine(items);
+    }
 }
-
-Console.WriteLine($"We have {sum} items in inventory");
