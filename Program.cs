@@ -1,21 +1,55 @@
 ﻿/*
-    This code reverses a message, counts the number of times
-    a particular character appears, then prints the results
-    to console window.
+    Student Grade application
+    ********************************************************************
+    97 - 100   A+
+    93 - 96    A
+    90 - 92    A-
+    87 - 89    B+
+    83 - 86    B
+    80 - 82    B-
+    77 - 79    C+
+    73 - 76    C
+    70 - 72    C-
+    67 - 69    D+
+    63 - 66    D
+    60 - 62    D-
+    0  - 59    F
 */
-string str = "The quick brown fox jumps over the lazy dog.";
 
-char[] charMessage = str.ToCharArray();
+using System;
 
-Array.Reverse(charMessage);
-int x = 0;
+// initialize variables - graded assignments 
+int currentAssignments = 5;
+int[] sophiaScores = new int[5] {90, 86, 87, 98, 100};
+int[] andrewScores = new int[5] {92, 89, 81, 96, 90};
+int[] emmaScores = new int[5] {90, 85, 87, 98, 68};
+int[] loganScores = new int[5] {90, 95, 87, 88, 96};
 
-foreach (char i in charMessage) { 
-    if (i == 'o') { 
-        x++; 
-    } 
-}
-string new_message = new String(charMessage);
+int sophiaSum = 0;
+int andrewSum = 0;
+int emmaSum = 0;
+int loganSum = 0;
 
-Console.WriteLine(new_message);
-Console.WriteLine($"'o' appears {x} times.");
+decimal sophiaScore;
+decimal andrewScore;
+decimal emmaScore;
+decimal loganScore;
+
+sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
+andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
+emmaSum = emma1 + emma2 + emma3 + emma4 + emma5;
+loganSum = logan1 + logan2 + logan3 + logan4 + logan5;
+
+sophiaScore = (decimal)sophiaSum / currentAssignments;
+andrewScore = (decimal)andrewSum / currentAssignments;
+emmaScore = (decimal)emmaSum / currentAssignments;
+loganScore = (decimal)loganSum / currentAssignments;
+
+Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
+Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
+Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
+
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
