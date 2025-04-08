@@ -30,6 +30,13 @@ int andrewSum = 0;
 int emmaSum = 0;
 int loganSum = 0;
 
+string[] studentNames = new string[] {"Sophia", "Andrew", "Emma", "Logan"};
+
+foreach (string name in studentNames)
+{
+    Console.WriteLine($"{name}");
+}
+
 decimal sophiaScore;
 decimal andrewScore;
 decimal emmaScore;
