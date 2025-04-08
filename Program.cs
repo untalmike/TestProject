@@ -34,20 +34,23 @@ string[] studentNames = new string[] {"Sophia", "Andrew", "Emma", "Logan"};
 
 foreach (string name in studentNames)
 {
-    Console.WriteLine($"{name}");
-    int sophiaSum = 0;
-
-    decimal sophiaScore;
-
-    foreach (int score in sophiaScores)
+    if (name == "Sophia")
     {
-        sophiaSum += score;
+        int sophiaSum = 0;
+        decimal sophiaScore;
+
+        foreach (int score in sophiaScores)
+        {
+            sophiaSum += score;
+        }
+        
+        sophiaScore = (decimal)sophiaSum / currentAssignments;
+
+        Console.WriteLine("Student\t\tGrade\n");
+        Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
     }
 
-    sophiaScore = (decimal)sophiaSum / currentAssignments;
 
-    Console.WriteLine("Student\t\tGrade\n");
-    Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
 }
 
 decimal andrewScore;
