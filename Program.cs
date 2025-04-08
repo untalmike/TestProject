@@ -1,22 +1,4 @@
-﻿/*
-    Student Grade application
-    ********************************************************************
-    97 - 100   A+
-    93 - 96    A
-    90 - 92    A-
-    87 - 89    B+
-    83 - 86    B
-    80 - 82    B-
-    77 - 79    C+
-    73 - 76    C
-    70 - 72    C-
-    67 - 69    D+
-    63 - 66    D
-    60 - 62    D-
-    0  - 59    F
-*/
-
-using System;
+﻿using System;
 
 // initialize variables - graded assignments 
 int currentAssignments = 5;
@@ -35,6 +17,7 @@ Console.WriteLine("Student\t\tGrade\n");
 foreach (string name in studentNames)
 {
     string currentStudent = name;
+    string currentStudentLetterGrade = "";
 
     if (currentStudent == "Sophia")
         studentScores = sophiaScores;
@@ -46,7 +29,7 @@ foreach (string name in studentNames)
         studentScores = loganScores;
 
     int sumAssignmentScores = 0;
-    
+
     decimal currentStudentGrade = 0;
 
     foreach (int score in studentScores)
@@ -56,7 +39,46 @@ foreach (string name in studentNames)
     
     currentStudentGrade = (decimal)sumAssignmentScores / currentAssignments;
 
-    Console.WriteLine($"{currentStudent}:\t\t{currentStudentGrade}\t?");
+    if (currentStudentGrade >= 97)
+        currentStudentLetterGrade = "A+";
+    
+    else if (currentStudentGrade >= 93)
+        currentStudentLetterGrade = "A";
+    
+    else if (currentStudentGrade >= 90)
+        currentStudentLetterGrade = "A-";
+    
+    else if (currentStudentGrade >= 87)
+        currentStudentLetterGrade = "B+";
+    
+    else if (currentStudentGrade >= 83)
+        currentStudentLetterGrade = "B";
+    
+    else if (currentStudentGrade >= 80)
+        currentStudentLetterGrade = "B-";
+    
+    else if (currentStudentGrade >= 77)
+        currentStudentLetterGrade = "C+";
+    
+    else if (currentStudentGrade >= 73)
+        currentStudentLetterGrade = "C";
+    
+    else if (currentStudentGrade >= 70)
+        currentStudentLetterGrade = "C-";
+    
+    else if (currentStudentGrade >= 67)
+        currentStudentLetterGrade = "D+";
+    
+    else if (currentStudentGrade >= 63)
+        currentStudentLetterGrade = "D";
+    
+    else if (currentStudentGrade >= 60)
+        currentStudentLetterGrade = "D-";
+    
+    else
+        currentStudentLetterGrade = "F";
+
+    Console.WriteLine($"{currentStudent}:\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
 
 }
 
