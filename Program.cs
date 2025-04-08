@@ -1,8 +1,7 @@
-﻿string[] fraudulentSurveys = [ "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" ];
+﻿string firstName = "Bob";
+int widgetsPurchased = 7;
 
-foreach (string items in fraudulentSurveys)
-{
-    if (items.StartsWith("B")){
-        Console.WriteLine(items);
-    }
-}
+// Testing a change to the message.
+// Int widgetSold = 7;
+// Console.WriteLine($"{firstName} sold {widgetsSold} widgets.");
+Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
